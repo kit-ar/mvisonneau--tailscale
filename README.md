@@ -1,16 +1,6 @@
-# mvisonneau/helm-charts
+# kit-ar/mvisonneau--tailscale
 
-https://github.com/mvisonneau/helm-charts
+https://github.com/kit-ar/mvisonneau--tailscale
 
-# Usage
-
-```bash
-~$ helm repo add mvisonneau https://charts.visonneau.fr/
-~$ helm repo update
-~$ helm search repo mvisonneau | awk '{print $1}' | tail -n +2
-mvisonneau/approuvez
-mvisonneau/generic-app
-mvisonneau/gitlab-ci-pipelines-exporter
-mvisonneau/slack-git-compare
-mvisonneau/tailscale-relay
-```
+This repo is focused on tailscale, and is forked from https://github.com/mvisonneau/helm-charts 
+It is modified to allow simpler usage in fluxcd/gitops by allowing externally defined secret

@@ -43,8 +43,8 @@ spec:
             - configMapRef:
                 name: {{ template "app.fullname" . }}-config
             - secretRef:
-                {{- if .Values.existingSecretAuthKey }}
-                name: {{ .Values.existingSecretAuthKey }}
+                {{- if .Values.config.existingSecretAuthKey }}
+                name: {{ .Values.config.existingSecretAuthKey }}
                 {{- else }}
                 name: {{ template "app.fullname" . }}-config
                 {{- end}}

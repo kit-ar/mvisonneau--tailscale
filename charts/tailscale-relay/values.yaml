@@ -72,7 +72,8 @@ securityContext:
 
 # Command to execute
 command:
-  - /usr/local/bin/entrypoint
+  - tailscaled
+  # - /usr/local/bin/entrypoint
 
 ## Arguments to append to the command
 # args:

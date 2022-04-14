@@ -2,7 +2,6 @@
 replicas: 1
 
 image:
-  # repository: docker.io/mvisonneau/tailscale
   repository: ghcr.io/tailscale/tailscale
   pullPolicy: IfNotPresent
   # tag: <default to chart app version>
@@ -71,24 +70,24 @@ securityContext:
     add:
       - NET_ADMIN
 
-## Command to execute
-# command:
-#   - /usr/local/bin/entrypoint
+# Command to execute
+command:
+  - /usr/local/bin/entrypoint
 
 ## Arguments to append to the command
 # args:
 
 ## Config
 config:
-  # # 211130: JC: removing explicit authKey from values file, 
+  # # 211130: JC: removing explicit authKey from values file,
   # #             as it is not a good security practice when used in gitflow environment
   # # Authorization key to connect onto tailscale (required)
   # authKey: foo
-  
-  # # Externally defined secret name; 
+
+  # # Externally defined secret name;
   # # If not defined, chart will attempt to use the *-config standard name
   # # Exampe can be seen in *-config--example secret
-  # existingSecretAuthKey: 
+  # existingSecretAuthKey:
 
   # Other variables to use during the tailscale up command
   variables: {}
